@@ -1,0 +1,17 @@
+name = "Sekai Survival Modded"
+author = "Lutfilah Dzaky"
+version = "1.6.3"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "2229934aab89d2b932235e0c487ea4713bc8e3b94164012b3e5f22bba2f1734c"
+
+[versions]
+fabric = "0.18.1"
+minecraft = "1.20.1"
+unsup = "1.1.4"
+
+[options]
+datapack-folder = "world/datapacks"
