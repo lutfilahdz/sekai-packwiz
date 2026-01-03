@@ -26,17 +26,10 @@ jobs:
       - name: Checkout current branch
         uses: actions/checkout@v4
 
-      - name: Setup second branch using worktree
-        run: |
-          git fetch origin
-          mkdir -p other
-          git worktree add other ${{ github.ref_name == 'main' && 'origin/dev' || 'origin/main' }}
-
       - name: Prepare output folder
         run: |
-          mkdir -p out/main out/dev
-          cp -r pack/* out/${{ github.ref_name }}/
-          cp -r other/pack/* out/${{ github.ref_name == 'main' && 'dev' || 'main' }}/
+          mkdir -p out/main
+          cp -r pack/* out/main/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
